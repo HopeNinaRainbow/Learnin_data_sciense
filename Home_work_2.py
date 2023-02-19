@@ -19,7 +19,8 @@ while True:
         break
     else:
         print("Используйте разделитель указанный вами ранее")
-print(name_columns) #Проверка работы кода
+a=len(name_columns)
+print(a) #Проверка работы кода
         
 enter_type=input('через разделитель введите тип данных для каждой колонки: числовые данные-float, int; текст-str; булевые-bool: ')
 data_type=[] 
@@ -32,6 +33,13 @@ while True:
     data_list.append(data_in_column)    
     if data_in_column == 'TRANSMISSION STOPPED':
         break #брык!
-data_list.pop()             
-print(data_list) #Покажи, что там на выходе
+data_list.pop()  
+b=len(data_list)           
+print(b) #Покажи, что там на выходе
+
+while True:
+    if a!=b:
+        print("Количество вводимых параметров не соответствует числу колонок")
+    else:
+        break
 
