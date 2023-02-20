@@ -37,5 +37,20 @@ while True:
 data_list.pop()  
 print(data_list)
 
+
+list_of_data=[]
+for elem in data_list:
+    el_str=str(elem).replace(';', ' ').split()
+    list_of_data.append(el_str)
+    if len(red_name_columns) != len (el_str):
+        print("INVALID ELEMENTS NUMBER")
+    
+#если количество элементов в строке не соответствует заявленному ранее, печатать сообщение 
+#  'INVALID ELEMENTS NUMBER' и начинать следующий ввод — 1 балл;
+    
+
+list_of_columns = list(zip(*list_of_data))
+final_dict = dict(zip(red_name_columns, list_of_data))
+print(final_dict)
         
 
