@@ -24,8 +24,9 @@ print(red_name_columns) #Проверка работы кода
         
 enter_type=input('через разделитель введите тип данных для каждой колонки: числовые данные-float, int; текст-str; булевые-bool: ')
 data_type=[] 
-data_type.append(str(enter_type))
-print(data_type)
+data_type.append(enter_type)
+red_data_type=str(data_type).replace(';', ' ').split()
+print(red_data_type)        
 
 data_list=[]
 while True:
@@ -36,9 +37,5 @@ while True:
 data_list.pop()  
 print(data_list)
 
-list_of_rows = big_string.split('\n')
-
-
-        
         
 
